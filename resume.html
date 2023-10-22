@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myresume</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-solid-straight/css/uicons-solid-straight.css'>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tilt Neon', sans-serif;
+
+        }
+
+        h1 {
+            font-size: 70px;
+        }
+        
+        .desktop-bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 15vh;
+            color: bisque;
+            background-color: black;
+        }
+
+        #heading {
+            font-size: x-large;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menubar {
+            display: flex;
+            gap: 30px;
+            font-size: medium;
+            font-weight: bold;
+
+        }
+        .menubar li{
+            list-style: none;
+            cursor: pointer;
+        }
+        .iconmenu{
+            display: none;
+        }
+
+        .leftfirst {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .left {
+            padding: 10px 5px;
+            border: 2px solid black;
+            border-radius: 30px;
+            display: flex;
+            justify-content: flex-start;
+
+
+
+        }
+
+        .right {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 50px;
+        }
+
+        .classtop {
+            display: flex;
+            flex-direction: column;
+            margin-top: 50px;
+        }
+
+        .firstbox {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            width: calc(100vw- 40vw);
+
+        }
+
+        .para {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            width: 40vw;
+        }
+
+        .infor {
+            margin-top: 20px;
+
+        }
+
+        img {
+            width: 200px;
+            z-index: 99;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+        }
+
+        .thinstroke {
+            display: none;
+        }
+
+        .threebox {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: start;
+            flex-wrap: wrap;
+        }
+
+        .a {
+            width: 300px;
+            border: 2px solid black;
+            border-radius: 30px;
+            margin-top: 25px;
+            text-align: center;
+
+        }
+
+        .a h4 {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a h4 i {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .a ul {
+            margin: 20px 30px;
+            text-align: left;
+        }
+
+        .a ul li {
+            padding-top: 10px;
+        }
+
+        .iconss {
+            margin-top: 30px;
+        }
+
+        .iconss i {
+            padding-right: 15px;
+        }
+        .name{
+            margin-top: 15px;
+        }
+        .footerz {
+            height: 15vh;
+            background-color: black;
+            color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 70px;
+
+
+        }
+
+
+
+        @media screen and (width <600px) {
+
+            h1 {
+                font-size: 50px;
+            }
+
+            .firstbox {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                margin-top: 100px;
+                width: calc(100vw- 40vw);
+
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                margin: 0 20px;
+            }
+
+            .para {
+
+                width: 100%;
+                margin-top: 20px;
+            }
+
+            .classtop {
+                display: flex;
+                flex-direction: column;
+                margin-top: 50px;
+            }
+
+            .firstbox {
+                margin-top: 10px;
+            }
+
+            .thinstroke {
+                display: block;
+                width: 90%;
+                height: 2px;
+                background-color: rgb(35, 35, 35);
+                border-radius: 50px;
+                margin-top: 50px;
+
+            }
+            .menubar{
+                display: none;
+            }
+            .iconmenu{
+                display: block;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <div class="desktop-bar">
+            <div id="heading">MYportfolio</div>
+            <div>
+                <ul class="menubar">
+                    <li>Home</li>
+                    <li>Contact</li>
+                    <li>Support</li>
+                    <li>Aboutus</li>
+                </ul>
+                <div class="iconmenu"><b>&#9776;</b></div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="classtop">
+
+        <div class="right">
+            <div class="firstbox">
+                <div class="left">Hello, this is Ashutosh here along with my Portfolio to Resume my carrier</div>
+                <div class="name">
+                    <h1>Ashutosh Suryabali Yadav</h1>
+                </div>
+            </div>
+            <div class="para">
+                <div class="imagess">
+                    <img src="images/ash yadav.webp" alt="ashutosh">
+                </div>
+                <div class="infor">
+                    "Aspiring frontend developer with a strong passion for creating visually appealing and user-friendly
+                    web interfaces. Eager to contribute my skills in HTML, CSS, and JavaScript to develop engaging
+                    web applications while continuously learning and growing in a dynamic work environment."
+                </div>
+                <div class="iconss">
+                    <i class="fi fi-brands-github"></i>
+                    <i class="fi fi-brands-css3"></i>
+                    <i class="fi fi-brands-discord"></i>
+                    <i class="fi fi-brands-wordpress"></i>
+
+
+                </div>
+            </div>
+            <div class="thinstroke"></div>
+        </div>
+    </div>
+    <div class="threebox">
+        <div class="a">
+            <h4><i class="fi fi-sr-briefcase"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Experience</h4>
+            <ul>
+                <li>Less than <b>6 months</b></li>
+                <li>
+                    Worked as a <b>Frontend Developer</b> in a small startup and did some outstanding projects</li>
+                <li>
+                    Implemented custom CSS styles and animations to enhance the visual appeal of the websites.</li>
+
+                <li>
+                    Created a personal portfolio website to showcase coding skills and projects. Utilized
+                    <b>HTML, CSS, and JavaScript</b> to design and develop the site.
+                </li>
+                <li>
+                    Designed and developed <b>responsive and visually</b> appealing websites, showcasing a strong
+                    understanding of UI/UX design principles.</li>
+                <li>
+                    Designed and built a simple <b> voice assistance </b> using an external API, demonstrating the
+                    ability to integrate data sources into web applications.
+                </li>
+            </ul>
+
+
+
+        </div>
+        <div class="a">
+            <h4><i class="fi fi-ss-bullseye-arrow"></i></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skills</h4>
+            <ul>
+                <li>
+                    <b>HTML and HTML5:</b> Proficiency in creating structured, semantic, and accessible web
+                    pages using HTML. Knowledge of the latest HTML5 features and elements.
+                </li>
+                <li>
+                    <b>CSS and CSS3:</b> Strong skills in styling web content with CSS, including the use of
+                    selectors, properties, and responsive design techniques. Understanding of CSS3
+                    animations and transitions.
+                </li>
+                <li>
+                    <b>Frontend Frameworks:</b> Familiarity with popular frontend frameworks like React, Angular, and the ability to build interactive web applications using these frameworks.
+                </li>
+                <li>
+                    <b>Responsive Web Design:</b> Knowledge of creating responsive and mobile-friendly
+                    designs to ensure a consistent user experience across various devices and screen
+                    sizes.
+                </li>
+                <li>
+                    <b>Web Performance Optimization:</b> Awareness of techniques to optimize web page
+                    loading times, reduce HTTP requests, and improve overall website performance.
+                </li>
+                <li>
+                    <b>Responsive Web Design:</b> Knowledge of creating responsive and mobile-friendly
+                    designs to ensure a consistent user experience across various devices and screen
+                    sizes.
+                </li>
+            </ul>
+        </div>
+        <div class="a">
+            <h4><i class="fi fi-sr-badge-check"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Expertise</h4>
+            <ul>
+                <li>FlexBox</li>
+                <li>Html5</li>
+                <li>CSS3</li>
+                <li>JavaScript</li>
+                <li>ui/ux</li>
+                <li>CSS Grids</li>
+                <li>Bootstrap</li>
+                <h4><i class="fi fi-sr-graduation-cap"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Education</h4>
+                <li>Bsc-It in 2021 from <b>University of Mumbai</b> CGPA 6.8</li>
+                <li>10+2 (PCM CS) in 2018 from <b>New English Jr. College</b> in vasai</li>
+                <h4><i class="fi fi-sr-megaphone"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Language</h4>
+                <li>English</li>
+                <li>Hindi</li>
+                <li>Marathi</li>
+                <li>Bhojpuri</li>
+                <h4><i class="fi fi-sr-phone-call"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Contact</h4>
+                <li>Phone: <br><b>8080694522</b></li>
+                <li>Email: <b>ashutoshsuryabaliyadav@gmail.com</b></li>
+                <li>Address: <b>Reliance petrol pump, Pelhar, Vasai (e)</b></li>
+
+
+            </ul>
+        </div>
+    </div>
+    <footer class="footerz">
+        © 2023 MYportfolio All Rights Reserved
+    </footer>
+
+</body>
+
+</html>

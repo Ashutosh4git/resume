@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/images.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+
+    <title>myportfolioashutosh</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            scroll-behavior: smooth;
+            font-family: 'Tilt Neon', sans-serif;
+
+        }
+
+        h1,
+        h3 {
+            margin-top: 10px;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        .desktop-bar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 15vh;
+            color: bisque;
+            background-color: black;
+        }
+
+        #heading {
+            font-size: x-large;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .menubar {
+            display: flex;
+            gap: 30px;
+            font-size: medium;
+            font-weight: bold;
+
+        }
+
+        .ashu {
+            display: none;
+        }
+
+        .heading2 {
+            display: none;
+        }
+
+        .mobilenav {
+            display: none;
+        }
+
+        #hambergar:checked~.mobilenav {
+            left: 0%;
+        }
+
+        .left {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            margin-top: 10vh;
+        }
+
+        .myimage {
+            margin-left: 50px;
+            margin-top: 50px;
+
+
+        }
+        img {
+            width: 230px;
+            z-index: 99;
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 2);
+        }
+
+        .myimage img {
+            transition: all 0.3s;
+
+        }
+
+        .myimage img:hover {
+            transform: scale(1.1);
+        }
+
+        .right {
+
+            margin-top: 50px;
+            display: flex;
+            flex-direction: column;
+            width: 40vw;
+            text-align: center;
+        }
+
+        .buttons {
+            height: 17vh;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .b1 {
+            border-radius: 90px;
+            background-color: black;
+            color: wheat;
+            border: none;
+            font-weight: bold;
+            padding: 10px 25px;
+            text-align: center;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+
+
+        }
+
+        .buttons input {
+            transition: all 0.3s;
+
+        }
+
+        .buttons input:hover {
+            transform: scale(1.1);
+
+        }
+
+        .b1:active {
+            background-color: gray;
+        }
+
+        .right h1 {
+            transition: all 0.3s;
+
+        }
+
+        .right h1:hover {
+
+            transform: scale(1.1);
+
+        }
+
+        .myprojects {
+            margin-top: 15px;
+            text-align: center;
+        }
+
+        @media screen and (width < 600px) {
+            .nav-bar {
+                display: none;
+            }
+
+            .heading2 {
+                height: 15vh;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                color: bisque;
+                background-color: black;
+                font-size: large;
+                font-weight: bold;
+            }
+
+            .mobilenav {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                line-height: 30px;
+                width: 70%;
+                height: 200vh;
+                position: absolute;
+                left: -100%;
+                background-color: black;
+                color: bisque;
+                font-size: medium;
+                font-weight: bold;
+                transition: ease-in-out 0.5s;
+                z-index: 100;
+            }
+
+            .mobilenav li {
+                margin-top: 70px;
+            }
+
+            .left {
+                height: 700px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: space-around;
+
+            }
+
+            .myimage {
+                margin: 0;
+            }
+
+            .right {
+
+                width: 60vw;
+            }
+            .myprojects {
+            margin-top: 60px;
+        }
+        }
+
+        .carosel {
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-wrap: wrap;
+
+
+
+        }
+
+        .myproject {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 250px;
+            height: 300px;
+            text-align: center;
+            box-shadow: 10px 9px 15px rgba(0, 0, 0, 1);
+            border: 3px solid rgb(74, 73, 73);
+            border-radius: 20px;
+            margin-top: 30px;
+            transition: all 0.3s;
+        }
+
+        .myproject:hover {
+            transform: scale(1.1);
+        }
+
+        .iconss{
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .iconss i{
+            padding: 0 15px;
+        }
+
+        .footerz {
+            height: 15vh;
+            background-color: black;
+            color: bisque;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 70px;
+
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="nav-bar">
+        <div class="desktop-bar">
+            <div id="heading">MYportfolio</div>
+            <div>
+                <ul class="menubar">
+                    <li>Home</li>
+                    <li>Contact</li>
+                    <li>Support</li>
+                    <li>Aboutus</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <input class="ashu" type="checkbox" id="hambergar">
+
+    <div class="heading2">
+        <div>MYportfolio</div>
+        <label for="hambergar">&#9776; </label>
+    </div>
+    <ul class="mobilenav">
+        <li>Home</li>
+        <li>Contact</li>
+        <li>Support</li>
+        <li>Aboutus</li>
+    </ul>
+    <div class="left">
+        <div class="myimage">
+            <img src="images/ash yadav.webp" alt="myinage">
+        </div>
+        <div class="right">
+            <div>
+                <h3>Hii<span> I am a Frontend Devloeper</span></h3><br>MY name is <h1 id="name">Ashutosh Yadav</h1><br>
+                I am looking for a job as a frontend developer and i have created this simple portfolio website using my coding skills thankyou. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum minima aliquam quasi assumenda asperiores? Nihil! 
+            </div>
+            <div class="buttons">
+                <div><a href="resume.html"><input class="b1" type="button" value="My Resume"></div></a>
+                <div><a href="contact.html"><input class="b1" type="button" value="Contact"></div></a>
+            </div>
+        </div>
+    </div>
+    <h1 class="myprojects"><span>
+            <h6>take a look to</h6>
+        </span> My Projects</h1>
+
+    <div class="carosel">
+        <div class="myproject">
+            <div>Visit my e-commerce site for the best user experience ever created by me for my portfolio, as I want to
+                start my career as a frontend developer, so visit now and have a look!</div>
+            <div><a href="mysite.html"><input type="button" value="My Site" class="b1"></a></div>
+        </div>
+        <div class="myproject">
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia delectus perferendis perspiciatis
+                odio ratione corrupti! Velit error consectetur voluptates veritatis.</div>
+            <div><a href="mysite.html"><input type="button" value="Click me" class="b1"></a></div>
+        </div>
+        <div class="myproject">
+            <div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia delectus perferendis perspiciatis
+                odio ratione corrupti! Velit error consectetur voluptates veritatis.</div>
+            <div><a href="mysite.html"><input type="button" value="Read more" class="b1"></a></div>
+        </div>
+    </div>
+
+    <div class="iconss">
+        <i class="fi fi-brands-github"></i>
+        <i class="fi fi-brands-css3"></i>
+        <i class="fi fi-brands-discord"></i>
+        <i class="fi fi-brands-atom"></i>
+        <i class="fi fi-brands-visual-basic"></i>
+        <i class="fi fi-brands-wordpress"></i>
+        <i class="fi fi-brands-python"></i>
+    </div>
+
+
+    <footer class="footerz">
+        © 2023 MYportfolio All Rights Reserved
+    </footer>
+
+
+
+
+</body>
+
+</html>

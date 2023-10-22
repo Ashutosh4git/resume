@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>myportfoliosite</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Tilt Neon', sans-serif;
+
+        }
+
+        .headerbar {
+            height: 15vh;
+            background-color: black;
+            color: wheat;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            font-size: large;
+            font-weight: bold;
+        }
+
+        .search-bar {
+            text-align: right;
+            width: 40%;
+            display: flex;
+            justify-content: right;
+            align-items: center;
+        }
+
+        #search-input {
+            padding: 5px;
+            width: 50%;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+            margin-right: 10px;
+        }
+
+        #search-button {
+            padding: 8px 20px;
+            background-color: #444;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+
+        }
+
+        #search-button:hover {
+            background-color: #555;
+        }
+
+
+        .footers {
+            height: 17vh;
+            background-color: black;
+            color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: medium;
+            font-weight: bold;
+
+        }
+
+
+
+        .sliders {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-container {
+            display: flex;
+            overflow: hidden;
+        }
+
+        .carousel-item {
+            width: 300px;
+            height: 300px;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position-x: center;
+        }
+
+        .carousel-wrapper {
+
+            display: flex;
+            transition: transform 1s;
+
+        }
+
+        .leftbar {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            text-align: center;
+            width: 400px;
+            height: 300px;
+        }
+
+        .carousel-item {
+            flex: 0 0 100%;
+        }
+
+        .carousel-btn {
+            background-color: white;
+            border: none;
+        }
+
+        .buttonss {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+        }
+
+        .productss {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            align-content: center;
+        }
+
+        .product {
+
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.8);
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            width: 60%;
+            margin-left: 15%;
+            margin-top: 100px;
+            margin-right: 160px;
+        }
+
+        .product:hover {
+            transform: scale(1.03);
+        }
+
+        .product img {
+            max-width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+            transition: transform 0.3s ease;
+        }
+
+        .product:hover img {
+            transform: scale(1.05);
+        }
+
+        .product h2 {
+            font-size: 20px;
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .product p {
+            font-size: 16px;
+            color: #777;
+        }
+
+        .product button {
+            background-color: #222;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color 0.3s ease;
+        }
+
+        .product button:hover {
+            background-color: #555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <nav class="headerbar">
+        <div id="menu-toggle">&#9776;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;My E-commerce Site</div>
+        <div class="search-bar">
+            <input type="text" id="search-input" placeholder="Search products...">
+            <button id="search-button">Search</button>
+        </div>
+    </nav>
+
+    <div class="sliders">
+        <div class="leftbar">
+            <div>
+                <h1>My E-Commerce Site</h1>
+            </div>
+            <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, ullam. Lorem ipsum, dolsit
+                amet consectetur adipisicing elit. Eos ex quidem tenetur non cum, ducimus corrupti? Fugit odit
+                praesentium nam.</div>
+        </div>
+        <div class="carousel-container">
+            <div class="carousel-wrapper">
+                <div class="carousel-item" style="background-image: url('images/watch.jpg');">
+                </div>
+                <div class="carousel-item" style="background-image: url('images/tenxtips-welcome.webp');">
+                </div>
+                <div class="carousel-item" style="background-image: url('images/car.jpg');">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="buttonss">
+        <button class="carousel-btn" onclick="prevSlide()">&#10094;</button>
+        <button class="carousel-btn" onclick="nextSlide()">&#10095;</button>
+    </div>
+
+    <div class="productss">
+
+        <div class="product">
+            <img src="images/auto.jpg" alt="Product 1">
+            <h2>Product 1</h2>
+            <p>I love Autorikshwa It's My Life Line.</p>
+            <p>$99.99</p>
+            <button class="add-to-cart-button" data-name="Product 1" data-price="99.99">Add to Cart</button>
+        </div>
+
+        <div class="product">
+            <img src="images/car.jpg" alt="Product 2">
+            <h2>Product 2</h2>
+            <p>By your favourite Car now at My E-commerce store just in $129.</p>
+            <p>$129.99</p>
+            <button class="add-to-cart-button" data-name="Product 2" data-price="129.99">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/cycle.jpg" alt="Product 3">
+            <h2>Product 3</h2>
+            <p>cycle in just $129.</p>
+            <p>$199.99</p>
+            <button class="add-to-cart-button" data-name="Product 3" data-price="199.99">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/watch.jpg" alt="Product 4">
+            <h2>Product 4</h2>
+            <p>Hurry us grab the limited offer now.</p>
+            <p>$19.99</p>
+            <button class="add-to-cart-button" data-name="Product 4" data-price="19.99">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/iphone.jpg" alt="Product 5">
+            <h2>Product 5</h2>
+            <p>iphone at just $12 it's not true.</p>
+            <p>$12.99</p>
+            <button class="add-to-cart-button" data-name="Product 5" data-price="12.99">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="images/laptop.jpg" alt="Product 6">
+            <h2>Product 6</h2>
+            <p>very important in today's world.</p>
+            <p>$290.99</p>
+            <button class="add-to-cart-button" data-name="Product 6" data-price="290.99">Add to Cart</button>
+
+        </div>
+        <div class="product">
+            <img src="images/wp7493637.webp" alt="Product 7">
+            <h2>Product 7</h2>
+            <p>Thar by Mr. Anand mahindra ji.</p>
+            <p>$90.99</p>
+            <button class="add-to-cart-button" data-name="Product 7" data-price="90.99">Add to Cart</button>
+
+        </div>
+    </div>
+    </div>
+
+    <footer class="footers">
+        © 2023 My E-Commerce Site: All Rights Reserved
+    </footer>
+    <!--javascript-->
+
+
+    <script>
+        let slideIndex = 0;
+        const totalSlides = document.querySelectorAll('.carousel-item').length;
+        let autoSlideInterval;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            const wrapper = document.querySelector('.carousel-wrapper');
+            const slideWidth = slides[0].clientWidth;
+
+            if (index < 0) {
+                slideIndex = totalSlides - 1;
+            }
+
+            if (index >= totalSlides) {
+                slideIndex = 0;
+            }
+
+            const offset = -slideIndex * slideWidth;
+            wrapper.style.transform = `translateX(${offset}px)`;
+        }
+
+        function prevSlide() {
+            clearInterval(autoSlideInterval); // Stop auto-slide
+            slideIndex--;
+            showSlide(slideIndex);
+            autoSlideInterval = setInterval(nextSlide, 3000); // Start auto-slide again
+        }
+
+        function nextSlide() {
+            clearInterval(autoSlideInterval); // Stop auto-slide
+            slideIndex++;
+            showSlide(slideIndex);
+            autoSlideInterval = setInterval(nextSlide, 3000); // Start auto-slide again
+        }
+
+        // Auto-slide functionality 
+        autoSlideInterval = setInterval(nextSlide, 3000);
+    </script>
+
+
+</body>
+
+</html>

@@ -293,7 +293,8 @@
             margin-bottom: 15px;
         }
         #front{
-            animation: anima 2s ease infinite alternate;
+            transition: all .3s;
+            animation: anime 0.1s 15 linear, poppup 0.2s ease-in-out 1.5s 3 alternate;
 
         }
         
@@ -306,6 +307,35 @@
             to {
                 transform: rotatey(0deg)
             }
+        }
+             @keyframes anime {
+
+            from {
+                transform: rotatex(0deg);
+            }
+
+            to {
+                transform: rotatex(360deg);
+            }
+
+
+
+        }
+
+        @keyframes poppup {
+
+            from {
+
+                transform: scale(1.2);
+
+            }
+
+            to {
+                transform: scale(1);
+
+
+            }
+
         }
 
     </style>
